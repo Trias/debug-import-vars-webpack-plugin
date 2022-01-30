@@ -19,7 +19,7 @@ React.version
 
 * this plugin cannot emulate "live bindings" (e.g. export a `let` variable)
 * code cannot use the debug names (as they are defined asynchronously)
-
+* only testeed with webpack 4
 
 ## Usage
 
