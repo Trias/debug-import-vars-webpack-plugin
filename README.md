@@ -14,12 +14,13 @@ React.version
 // in your devtools console as you would write in the code
 ```
 
-# Limitations
-**This plugin is not intended for production environment.**
+## Limitations
+**This plugin is not intended for production environments**
 
 * this plugin cannot emulate "live bindings" (e.g. export a `let` variable)
 * code cannot use the debug names (as they are defined asynchronously)
-* only testeed with webpack 4
+* only tested with webpack 4
+* uses monkey patching and webpack internals. Will accept a PR which refactors the plugin to a more stable api.
 
 ## Usage
 
