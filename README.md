@@ -3,6 +3,7 @@
 This plugin adds import names as they are defined in the original source code for debugging purposes.
 
 Example:
+
 ```
 // in your code you have this import:
 import React from 'react';
@@ -19,13 +20,12 @@ React.version
 
 * this plugin cannot emulate "live bindings" (e.g. export a `let` variable)
 * code cannot use the debug names (as they are defined asynchronously)
-* only tested with webpack 4
 * uses monkey patching and webpack internals. Will accept a PR which refactors the plugin to a more stable api.
 
 ## Usage
 
 ```javascript
-const DebugNamesPlugin = require( 'debug-names-webpack-plugin' );
+const DebugNamesPlugin = require("debug-names-webpack-plugin");
 
 // webpack.config.js
 module.exports = {
