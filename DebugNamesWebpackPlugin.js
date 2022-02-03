@@ -42,17 +42,17 @@ module.exports = class DebugNamesWebpackPlugin {
           return orig;
         }
 
-        let importVarMap;
+        let generatedModuleName;
         if (this.parserScope) {
-          importVarMap = this.parserScope.importVarMap;
+          generatedModuleName = this.parserScope.importVarMap.get(this._module);
         } else {
           // webpack 5
           let { moduleGraph } = arguments[1];
-          const module = moduleGraph.getParentModule(this);
-          importVarMap = moduleGraph.getMeta(module).importVarMap;
+          const parentModule = moduleGraph.getParentModule(this);
+          generatedModuleName = moduleGraph
+            .getMeta(parentModule)
+            .importVarMap.get(moduleGraph.getModule(this));
         }
-
-        const generatedModuleName = last([...importVarMap.values()]);
 
         const debugImportVars = self.getDebugImportVars(
           generatedModuleName,
