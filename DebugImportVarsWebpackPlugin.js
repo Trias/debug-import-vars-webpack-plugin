@@ -63,7 +63,7 @@ class DebugImportVarsDependency extends Dependency {
 
   updateHash(hash) {
     super.updateHash(hash);
-    for (specifier of this.specifiers) {
+    for (const specifier of this.specifiers) {
       hash.update(Object.values(specifier).join("|"));
     }
   }
