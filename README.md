@@ -1,4 +1,4 @@
-# debug-names-webpack-plugin
+# debug-import-vars-webpack-plugin
 
 This plugin adds import names as they are defined in the original source code for debugging purposes.
 
@@ -16,21 +16,19 @@ React.version
 ```
 
 ## Limitations
+
 **This plugin is not intended for production environments**
 
-* this plugin cannot emulate "live bindings" (e.g. export a `let` variable)
-* code cannot use the debug names (as they are defined asynchronously)
-* uses monkey patching and webpack internals. Will accept a PR which refactors the plugin to a more stable api.
+- this plugin cannot emulate "live bindings" (e.g. export a `let` variable)
+- debug import vars are not available during first (synchronous) execution of the code (as they are defined asynchronously)
 
 ## Usage
 
 ```javascript
-const DebugNamesPlugin = require("debug-names-webpack-plugin");
+const DebugImportVarsPlugin = require("debug-import-vars-webpack-plugin");
 
 // webpack.config.js
 module.exports = {
-  plugins: [
-    new DebugNamesPlugin()
-  ]
-}
+  plugins: [new DebugImportVarsPlugin()],
+};
 ```

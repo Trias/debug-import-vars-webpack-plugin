@@ -1,14 +1,14 @@
 {
-  "name": "debug-names-webpack-plugin",
-  "version": "1.1.1",
+  "name": "debug-import-vars-webpack-plugin",
+  "version": "1.1.2",
   "description": "creates variables for imports which are named as defined in the original source code for debugging purposes",
-  "main": "DebugNamesWebpackPlugin.js",
+  "main": "DebugImportVarsWebpackPlugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trias/debug-names-webpack-plugin.git"
+    "url": "git+https://github.com/trias/debug-import-vars-webpack-plugin.git"
   },
   "keywords": [
     "import",
@@ -19,7 +19,7 @@
   "author": "Stefan Ackermann (@trias), Staffan Eketorp (@staeke)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trias/debug-names-webpack-plugin/issues"
+    "url": "https://github.com/trias/debug-import-vars-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/trias/debug-names-webpack-plugin#readme"
+  "homepage": "https://github.com/trias/debug-import-vars-webpack-plugin#readme"
 }
