@@ -56,7 +56,7 @@ class DebugImportVarsDependency extends Dependency {
       return {
         type: specifier.type,
         localName: specifier.local?.name,
-        importName: specifier.imported?.name,
+        importedName: specifier.imported?.name,
       };
     });
   }

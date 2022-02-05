@@ -1,6 +1,6 @@
 {
   "name": "debug-import-vars-webpack-plugin",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "creates variables for imports which are named as defined in the original source code for debugging purposes",
   "main": "DebugImportVarsWebpackPlugin.js",
   "scripts": {
