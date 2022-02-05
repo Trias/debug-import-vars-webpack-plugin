@@ -61,8 +61,11 @@ class DebugImportVarsDependency extends Dependency {
     });
   }
 
-  hash(...args) {
-    return this.harmonyDependency.hash(...args);
+  updateHash(hash) {
+    super.updateHash(hash);
+    for (specifier of this.specifiers) {
+      hash.update(Object.values(specifier).join("|"));
+    }
   }
 
   serialize(context) {
