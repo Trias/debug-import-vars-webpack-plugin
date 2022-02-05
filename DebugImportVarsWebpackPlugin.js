@@ -1,6 +1,11 @@
 const HarmonyImportDependency = require("webpack/lib/dependencies/HarmonyImportDependency");
 const Dependency = require("webpack/lib/Dependency");
-const makeSerializable = require("webpack/lib/util/makeSerializable");
+let makeSerializable;
+try {
+  makeSerializable = require("webpack/lib/util/makeSerializable");
+} catch (e) {
+  makeSerializable = () => {};
+}
 
 module.exports = class DebugImportVarsWebpackPlugin {
   apply(compiler) {
